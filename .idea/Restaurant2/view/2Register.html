@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Restaurant-guide - Register</title>
+  <link rel="stylesheet" href="../2restaurant.css">
+  <script src="../controller/2register.js" type="module" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>CAMPUS<span>EATS</span></h1>
+  <p>Päivittäinen kumppanisi parhaiden opiskelija-aterioiden löytämiseen Suomen yliopistoissa.</p>
+</header>
+
+<main>
+  <section id="register-section">
+    <h2>Luo uusi käyttäjätunnus</h2>
+    <form id="register-form">
+      <div class="form-group">
+        <label for="username">Käyttäjätunnus</label>
+        <input type="text" id="username" name="username" required minlength="3" placeholder="Valitse käyttäjänimi">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Sähköposti</label>
+        <input type="email" id="email" name="email" required placeholder="esimerkki@koulu.fi">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Salasana</label>
+        <input type="password" id="password" name="password" required placeholder="Luo vahva salasana">
+      </div>
+
+      <button type="submit" id="register-submit">Rekisteröidy</button>
+    </form>
+
+    <p class="login-link">Onko sinulla jo tunnus? <a href="2Login.html">Kirjaudu sisään tästä</a>.</p>
+  </section>
+</main>
+
+</body>
+</html>
+</body>
+</html>

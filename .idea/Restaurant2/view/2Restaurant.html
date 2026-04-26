@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Restaurant-guide</title>
+    <link rel="stylesheet" href="../2restaurant.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <script src="../controller/2restaurant.js" type="module" defer></script>
+</head>
+<body>
+//
+<header>
+
+    <h1>CAMPUSEATS</h1>
+    <p>Tervetuloa opiskelijaravintola-oppaaseen</p>
+    <p2>
+        Päivittäinen kumppanisi parhaiden opiskelija-aterioiden löytämiseen Suomen yliopistoissa.
+    </p2>
+
+    <section id="search-container">
+        <input type="text" id="search" placeholder="Etsi ravintolaa tai kaupunkia...">
+    </section>
+
+    <section id="location-input-container">
+        <input type="text" id="location-input" placeholder="Syötä osoite (esim. Karaportti 2)">
+        <button id="location-button">Hae sijainti</button>
+    </section>
+</header>
+
+
+
+<main>
+    <div id="map"></div>
+    <div id="restaurant-list" class="grid container">
+    </div>
+</main>
+
+<dialog id="modal"></dialog>
+</div>
+</body>
+</html>
