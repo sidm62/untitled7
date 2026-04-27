@@ -1,5 +1,5 @@
 :root {
-    /* Uusi elävämpi väripaletti */
+
     --primary-gradient: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
     --dark-accent: #1e293b;
     --bg-color: #f1f5f9;
@@ -40,7 +40,7 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Hakukentät */
+
 #search-container, #location-input-container {
     max-width: 550px;
     margin: 25px auto;
@@ -84,7 +84,7 @@ button:hover {
     filter: brightness(1.1);
 }
 
-/* Kartta - pidetään toiminnallisuus samana, muutetaan vain ulkoasua */
+
 #map {
     height: 450px;
     width: 92%;
@@ -95,7 +95,6 @@ button:hover {
     border: 8px solid white;
 }
 
-/* Ravintolalista */
 #restaurant-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -126,7 +125,6 @@ button:hover {
     font-size: 1.25rem;
 }
 
-/* Lähimmän ravintolan korostus - Elävämpi kulta/keltainen */
 .closest-highlight {
     background: linear-gradient(to bottom right, #ffffff, #fffef0) !important;
     border: 2px solid var(--warning) !important;
@@ -146,7 +144,7 @@ button:hover {
     border-radius: 20px;
 }
 
-/* Modaalitila (Dialog) - Blur-efekti taustalla */
+
 dialog {
     border: none;
     border-radius: 24px;
@@ -162,7 +160,7 @@ dialog::backdrop {
     backdrop-filter: blur(8px);
 }
 
-/* Sisältö modaalin sisällä (olettaen että HTML rakenne on tämä) */
+
 .modal-header {
     background: var(--dark-accent);
     color: white;
@@ -209,7 +207,7 @@ body {
     flex-direction: column;
 }
 
-/* --- LANDING PAGE --- */
+
 .landing-page {
     flex: 1;
     display: flex;
@@ -220,12 +218,8 @@ body {
     text-align: center;
 }
 
-/* Poistettu overlay, koska kuvaa ei ole */
-.background-overlay {
-    display: none;
-}
 
-/* --- NAVIGAATIO --- */
+
 .top-nav {
     width: 100%;
     padding: 30px 50px;
@@ -253,7 +247,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- SISÄLTÖ --- */
+
 .content {
     max-width: 700px;
 }
@@ -320,7 +314,7 @@ p {
     background-color: #0056b3;
 }
 
-/* --- FOOTER / SOCIAL PROOF --- */
+
 .social-proof {
     margin-top: 60px;
     font-size: 0.8rem;
@@ -329,20 +323,14 @@ p {
     letter-spacing: 1px;
 }
 
-/* Animaatioluokat poistettu käytöstä tai nollattu */
-.fade-in, .fade-in-delay {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-}
 
-/* MOBIILI */
+
 @media (max-width: 600px) {
     h1 { font-size: 2.5rem; }
     .action-buttons { flex-direction: column; }
     .top-nav { padding: 20px; }
 }
-/* --- INFO OSIO --- */
+
 .info-section {
     background-color: var(--white);
     color: var(--dark);
@@ -361,7 +349,7 @@ p {
     font-weight: 800;
 }
 
-/* Grid-asettelu korteille */
+
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -383,43 +371,82 @@ p {
 .info-card h3 {
     margin-bottom: 15px;
     color: var(--primary);
-}/* Tekstin tyyli korteissa */
 
-.info-card p {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.5;
+
+    .info-card p {
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
+    .extra-content {
+        border-top: 2px solid var(--gray-bg);
+        padding-top: 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .extra-content h3 {
+        margin-bottom: 20px;
+    }
+
+    .extra-content p {
+        color: #555;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    @media (max-width: 768px) {
+        .info-section {
+            padding: 50px 20px;
+        }
+
+        .info-section h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .profile-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .profile-icon {
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+
+    .btn-logout {
+        margin-top: 20px;
+        background-color: #ff4444;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .btn-logout:hover {
+        background-color: #cc0000;
+    }
 }
-
-/* Lisäteksti alhaalla */
-.extra-content {
-    border-top: 2px solid var(--gray-bg);
-    padding-top: 40px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.extra-content h3 {
-    margin-bottom: 20px;
-}
-
-.extra-content p {
-    color: #555;
-}
-
-/* Sulava skrollaus (lisää bodyyn tai html-tagiin) */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobiilioptimointi */
-@media (max-width: 768px) {
-    .info-section { padding: 50px 20px; }
-    .info-section h2 { font-size: 1.8rem; }
-}
-
-
-
 
 
